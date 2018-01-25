@@ -3,24 +3,24 @@ package picocli.example
 import picocli.CommandLine.*
 import picocli.CommandLine
 
-@Command(name = "MyApp", version = ["Kotlin picocli demo v1.0"],
-        description = ["@|bold Kotlin|@ @|underline picocli|@ example"])
+@Command(name = "MyApp", version = arrayOf("picocli demo for Kotlin v1.0 and Kotlin v1.1"),
+        description = arrayOf("@|bold Kotlin|@ @|underline picocli|@ example"))
 class MyApp : Runnable {
 
-    @Option(names = ["-c", "--count"], paramLabel = "COUNT",
-            description = ["the count"])
+    @Option(names = arrayOf("-c", "--count"), paramLabel = "COUNT",
+            description = arrayOf("the count"))
     private var count: Int = 0
 
-    @Option(names = ["-h", "--help"], usageHelp = true,
-            description = ["print this help and exit"])
+    @Option(names = arrayOf("-h", "--help"), usageHelp = true,
+            description = arrayOf("print this help and exit"))
     private var helpRequested: Boolean = false
 
-    @Option(names = ["-V", "--version"], versionHelp = true,
-            description = ["print version info and exit"])
+    @Option(names = arrayOf("-V", "--version"), versionHelp = true,
+            description = arrayOf("print version info and exit"))
     private var versionRequested: Boolean = false
 
     override fun run() {
-        for (i in 0 until this.count) {
+        for (i in 0 until count) {
             println("hello world $i...")
         }
     }

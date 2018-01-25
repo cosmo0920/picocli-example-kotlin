@@ -16,6 +16,6 @@ dependencies {
 }
 compileKotlin {
     kotlinOptions {
-        languageVersion = "1.2"
+        languageVersion = "1.1"
     }
 }
